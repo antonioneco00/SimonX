@@ -5,7 +5,11 @@ $(document).ready(() => {
     var empezarTexto = $("#botonEmpezar p")
     var contenedorBotones = $("#contenedorBotones");
     var botones = $(".botones");
+    var numeroAleatorio = Math.floor(Math.random() * 9) + 1;
+    var taparPantalla = $("#taparPantalla");
+
     botones.hide();
+    taparPantalla.hide();
     botonEmpezar.hide().delay(1000).fadeIn(300);
     botonEmpezar.click(() => {
         botonEmpezar.fadeOut(250, () => {
@@ -22,4 +26,14 @@ $(document).ready(() => {
         });
         empezarTexto.animate({left: '-100px'}, 100);
     });
+
+    /* function comienzo() {
+
+    } */
 });
+
+var numeroBoton;
+
+function getId(id) {
+    numeroBoton = id;
+}
