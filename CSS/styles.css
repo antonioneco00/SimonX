@@ -39,9 +39,11 @@ html body #fondo .filas {
 }
 html body #fondo #barra1 {
   left: -100px;
+  z-index: -9;
 }
 html body #fondo #fila1 {
   top: -50px;
+  z-index: -19;
 }
 html body #fondo #barra1, html body #fondo #fila1 {
   animation: animacionColores1 1000ms;
@@ -64,9 +66,11 @@ html body #fondo #barra1, html body #fondo #fila1 {
 }
 html body #fondo #barra2 {
   left: 100px;
+  z-index: -8;
 }
 html body #fondo #fila2 {
   top: 50px;
+  z-index: -18;
 }
 html body #fondo #barra2, html body #fondo #fila2 {
   animation: animacionColores2 1000ms;
@@ -89,9 +93,11 @@ html body #fondo #barra2, html body #fondo #fila2 {
 }
 html body #fondo #barra3 {
   left: 300px;
+  z-index: -7;
 }
 html body #fondo #fila3 {
   top: 150px;
+  z-index: -17;
 }
 html body #fondo #barra3, html body #fondo #fila3 {
   animation: animacionColores3 1000ms;
@@ -114,9 +120,11 @@ html body #fondo #barra3, html body #fondo #fila3 {
 }
 html body #fondo #barra4 {
   left: 500px;
+  z-index: -6;
 }
 html body #fondo #fila4 {
   top: 250px;
+  z-index: -16;
 }
 html body #fondo #barra4, html body #fondo #fila4 {
   animation: animacionColores4 1000ms;
@@ -139,9 +147,11 @@ html body #fondo #barra4, html body #fondo #fila4 {
 }
 html body #fondo #barra5 {
   left: 700px;
+  z-index: -5;
 }
 html body #fondo #fila5 {
   top: 350px;
+  z-index: -15;
 }
 html body #fondo #barra5, html body #fondo #fila5 {
   animation: animacionColores5 1000ms;
@@ -164,9 +174,11 @@ html body #fondo #barra5, html body #fondo #fila5 {
 }
 html body #fondo #barra6 {
   left: 900px;
+  z-index: -4;
 }
 html body #fondo #fila6 {
   top: 450px;
+  z-index: -14;
 }
 html body #fondo #barra6, html body #fondo #fila6 {
   animation: animacionColores6 1000ms;
@@ -189,9 +201,11 @@ html body #fondo #barra6, html body #fondo #fila6 {
 }
 html body #fondo #barra7 {
   left: 1100px;
+  z-index: -3;
 }
 html body #fondo #fila7 {
   top: 550px;
+  z-index: -13;
 }
 html body #fondo #barra7, html body #fondo #fila7 {
   animation: animacionColores7 1000ms;
@@ -214,9 +228,11 @@ html body #fondo #barra7, html body #fondo #fila7 {
 }
 html body #fondo #barra8 {
   left: 1300px;
+  z-index: -2;
 }
 html body #fondo #fila8 {
   top: 650px;
+  z-index: -12;
 }
 html body #fondo #barra8, html body #fondo #fila8 {
   animation: animacionColores8 1000ms;
@@ -239,9 +255,11 @@ html body #fondo #barra8, html body #fondo #fila8 {
 }
 html body #fondo #barra9 {
   left: 1500px;
+  z-index: -1;
 }
 html body #fondo #fila9 {
   top: 750px;
+  z-index: -11;
 }
 html body #fondo #barra9, html body #fondo #fila9 {
   animation: animacionColores9 1000ms;
@@ -327,6 +345,12 @@ html body #juego #contenedorBotones .botones:hover {
     border: none;
     box-shadow: 0px 0px 20px #30b, 0px 0px 20px #30b inset;
   }
+}
+html body #taparPantalla {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
