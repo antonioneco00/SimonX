@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Imagine";
+  src: url("Font/Imagine_Font.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  overflow: hidden;
+}
+html body #fondo {
+  width: 100%;
+  height: 100%;
+}
+html body #fondo .barras {
+  width: 100px;
+  height: 100%;
+  transform: skewX(160deg);
+  position: absolute;
+  z-index: 0;
+}
+html body #fondo .filas {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  transform: skewY(-10deg);
+  z-index: -1;
+}
+html body #fondo #barra1 {
+  left: -100px;
+}
+html body #fondo #fila1 {
+  top: -50px;
+}
+html body #fondo #barra1, html body #fondo #fila1 {
+  animation: animacionColores1 1000ms;
+  animation-delay: 0ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores1 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra2 {
+  left: 100px;
+}
+html body #fondo #fila2 {
+  top: 50px;
+}
+html body #fondo #barra2, html body #fondo #fila2 {
+  animation: animacionColores2 1000ms;
+  animation-delay: 100ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores2 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra3 {
+  left: 300px;
+}
+html body #fondo #fila3 {
+  top: 150px;
+}
+html body #fondo #barra3, html body #fondo #fila3 {
+  animation: animacionColores3 1000ms;
+  animation-delay: 200ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores3 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra4 {
+  left: 500px;
+}
+html body #fondo #fila4 {
+  top: 250px;
+}
+html body #fondo #barra4, html body #fondo #fila4 {
+  animation: animacionColores4 1000ms;
+  animation-delay: 300ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores4 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra5 {
+  left: 700px;
+}
+html body #fondo #fila5 {
+  top: 350px;
+}
+html body #fondo #barra5, html body #fondo #fila5 {
+  animation: animacionColores5 1000ms;
+  animation-delay: 400ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores5 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra6 {
+  left: 900px;
+}
+html body #fondo #fila6 {
+  top: 450px;
+}
+html body #fondo #barra6, html body #fondo #fila6 {
+  animation: animacionColores6 1000ms;
+  animation-delay: 500ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores6 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra7 {
+  left: 1100px;
+}
+html body #fondo #fila7 {
+  top: 550px;
+}
+html body #fondo #barra7, html body #fondo #fila7 {
+  animation: animacionColores7 1000ms;
+  animation-delay: 600ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores7 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra8 {
+  left: 1300px;
+}
+html body #fondo #fila8 {
+  top: 650px;
+}
+html body #fondo #barra8, html body #fondo #fila8 {
+  animation: animacionColores8 1000ms;
+  animation-delay: 700ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores8 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #fondo #barra9 {
+  left: 1500px;
+}
+html body #fondo #fila9 {
+  top: 750px;
+}
+html body #fondo #barra9, html body #fondo #fila9 {
+  animation: animacionColores9 1000ms;
+  animation-delay: 800ms;
+  animation-iteration-count: infinite;
+}
+@keyframes animacionColores9 {
+  0% {
+    background-color: #302;
+    box-shadow: 0px 0px 20px #302;
+  }
+  50% {
+    background-color: #102c;
+    box-shadow: 0px 0px 20px #102c;
+  }
+  100% {
+    background-color: #0000;
+    box-shadow: 0px 0px 0px #0000;
+  }
+}
+html body #juego {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  width: 0px;
+  height: 0px;
+  background-color: #000;
+  color: #30b;
+  text-align: center;
+  position: absolute;
+  font-size: 0px;
+  font-family: "Imagine";
+  border-radius: 20px;
+  animation: animacionInicial 1000ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes startButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+html body #juego #contenedorBotones {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  width: 50%;
+  height: 100%;
+  justify-self: center;
+  justify-content: center;
+}
+html body #juego #contenedorBotones #botonEmpezar {
+  width: 200px;
+  height: 75px;
+  opacity: 0;
+  align-self: center;
+  font-size: 40px;
+  line-height: 62px;
+  animation: startButton 300ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+  transition: all 300ms;
+  cursor: pointer;
+}
+html body #juego #contenedorBotones #botonEmpezar:hover {
+  box-shadow: 4px 4px 0px 0px #30b, 8px 8px 0px 0px #30bb, 12px 12px 0px 0px #30b7, 16px 16px 0px 0px #30b3;
+}
+html body #juego #contenedorBotones .botones {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #30b;
+}
+@keyframes animacionInicial {
+  0% {
+    transform: rotateY(0deg);
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    box-shadow: 0px 0px 1px #30b, 0px 0px 1px #30b inset;
+  }
+  100% {
+    transform: rotateY(720deg);
+    width: 500px;
+    height: 500px;
+    font-size: 50px;
+    border: none;
+    box-shadow: 0px 0px 20px #30b, 0px 0px 20px #30b inset;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
