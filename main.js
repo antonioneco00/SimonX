@@ -13,7 +13,10 @@ $(document).ready(() => {
     botonEmpezar.hide().delay(1000).fadeIn(300);
     botonEmpezar.click(() => {
         botonEmpezar.fadeOut(250, () => {
-            botones.fadeIn(300);
+            taparPantalla.show();
+            botones.fadeIn(300, () => {
+                setTimeout(comienzo, 300);
+            });
             contenedorBotones.css({
                 'display': 'grid',
                 'justify-items': 'center',
@@ -27,9 +30,17 @@ $(document).ready(() => {
         empezarTexto.animate({left: '-100px'}, 100);
     });
 
-    /* function comienzo() {
+    function comienzo() {
+        $("#btn" + numeroAleatorio).css('background-color', '#00f');
+        setTimeout(() => {
+            $("#btn" + numeroAleatorio).css('background-color', '#000');
+            taparPantalla.hide();
+        }, 300);
 
-    } */
+        $("#btn" + numeroBoton).click(() => {
+            $(this).css('background-color', '#00f');
+        });
+    }
 });
 
 var numeroBoton;
