@@ -5,7 +5,9 @@ $(document).ready(() => {
     var empezarTexto = $("#botonEmpezar p")
     var contenedorBotones = $("#contenedorBotones");
     var botones = $(".botones");
-    var numeroAleatorio = Math.floor(Math.random() * 9) + 1;
+    var idBoton = "#btn";
+    var iterador = 0;
+    var listaNumeros = [];
     var taparPantalla = $("#taparPantalla");
 
     botones.hide();
@@ -14,9 +16,8 @@ $(document).ready(() => {
     botonEmpezar.click(() => {
         botonEmpezar.fadeOut(250, () => {
             taparPantalla.show();
-            botones.fadeIn(300, () => {
-                setTimeout(comienzo, 300);
-            });
+            botones.fadeIn(300);
+            setTimeout(comienzo, 600);
             contenedorBotones.css({
                 'display': 'grid',
                 'justify-items': 'center',
@@ -31,20 +32,65 @@ $(document).ready(() => {
     });
 
     function comienzo() {
-        $("#btn" + numeroAleatorio).css('background-color', '#00f');
-        setTimeout(() => {
-            $("#btn" + numeroAleatorio).css('background-color', '#000');
-            taparPantalla.hide();
-        }, 300);
+        listaNumeros.push(Math.floor(Math.random() * 9) + 1);
+        iterador = 0;
 
-        $("#btn" + numeroBoton).click(() => {
-            $(this).css('background-color', '#00f');
-        });
+        function mostrarPartida(i) {
+            setTimeout(() => {
+                $(idBoton + listaNumeros[i]).css('background-color', '#00f');
+            }, 300 * i + 300);
+            setTimeout(() => {
+                $(idBoton + listaNumeros[i]).css('background-color', '#000');
+                taparPantalla.hide();
+            }, 300 * i + 500);
+        }
+
+        for (var i = 0; i < listaNumeros.length; i++) {
+            mostrarPartida(i);
+        }
     }
+
+    botones.click(() => {
+        $(idBoton + Id).css('background-color', '#00f');
+        taparPantalla.show();
+        // comprobar(listaNumeros.length);
+        setTimeout(() => {
+            $(idBoton + Id).css('background-color', '#000');
+            taparPantalla.hide();
+        }, 200);
+
+        console.log(Id);
+        console.log(iterador);
+        console.log(listaNumeros);
+
+        if (Id == listaNumeros[iterador] && iterador == listaNumeros.length - 1) {
+            // iterador = 0;
+            setTimeout(comienzo, 1000);
+        } else if (Id != listaNumeros[iterador]) {
+            taparPantalla.show();
+            console.log("incorrecto");
+
+            for (var i = 0; i < 6; i++) {
+                function botonIncorrecto(i) {
+                    setTimeout(() => {
+                        if (i % 2 == 0) {
+                            $(idBoton + Id).css('background-color', '#f00');
+                        } else {
+                            $(idBoton + Id).css('background-color', '#000');
+                        }
+                    }, 300 * i);
+                }
+
+                botonIncorrecto(i);
+            }
+        }
+
+        iterador++;
+    });
 });
 
-var numeroBoton;
+var Id;
 
 function getId(id) {
-    numeroBoton = id;
+    Id = id;
 }
