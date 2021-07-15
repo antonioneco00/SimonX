@@ -332,6 +332,11 @@ html body #juego #contenedorBotones .botones {
 html body #juego #contenedorBotones .botones:hover {
   border: 1px solid #09f;
 }
+html body #juego #footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @keyframes animacionInicial {
   0% {
     transform: rotateY(0deg);

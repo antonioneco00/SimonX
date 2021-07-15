@@ -1,6 +1,9 @@
 /// <reference path="jQuery/index.d.ts"/>
 
 $(document).ready(() => {
+
+    // Variables
+
     var botonEmpezar = $("#botonEmpezar");
     var empezarTexto = $("#botonEmpezar p")
     var contenedorBotones = $("#contenedorBotones");
@@ -8,12 +11,28 @@ $(document).ready(() => {
     var idBoton = "#btn";
     var iterador = 0;
     var listaNumeros = [];
+    var footer = $("#footer");
+    var record;
+    var highScore = 0;
     var taparPantalla = $("#taparPantalla");
 
-    botones.hide();
-    taparPantalla.hide();
-    botonEmpezar.hide().delay(1000).fadeIn(300);
+    mostrarBotonEmpezar();
+
+    function mostrarBotonEmpezar() {
+        listaNumeros = [];
+        botones.hide();
+        taparPantalla.hide();
+        contenedorBotones.css('display', 'flex');
+        botonEmpezar.css({
+            'transition': 'box-shadow 300ms',
+            'box-shadow': '',
+        });
+        empezarTexto.css('left', '');
+        botonEmpezar.hide().delay(1000).fadeIn(300);
+    }
+
     botonEmpezar.click(() => {
+        console.log('Se ha clicado el boton empezar');
         botonEmpezar.fadeOut(250, () => {
             taparPantalla.show();
             botones.fadeIn(300);
@@ -28,12 +47,16 @@ $(document).ready(() => {
             'transition': 'box-shadow 100ms',
             'box-shadow': '40px 4px 0px 0px #30b, 80px 8px 0px 0px #30bb, 120px 12px 0px 0px #30b7, 160px 16px 0px 0px #30b3'
         });
-        empezarTexto.animate({left: '-100px'}, 100);
+        empezarTexto.animate({ left: '-100px' }, 100);
     });
 
     function comienzo() {
+        record = listaNumeros.length;
         listaNumeros.push(Math.floor(Math.random() * 9) + 1);
+        console.log('Se ha añadido 1 numero');
         iterador = 0;
+        footer.html(record);
+        footer.css('font-size', '');
 
         function mostrarPartida(i) {
             setTimeout(() => {
@@ -41,8 +64,10 @@ $(document).ready(() => {
             }, 300 * i + 300);
             setTimeout(() => {
                 $(idBoton + listaNumeros[i]).css('background-color', '#000');
-                taparPantalla.hide();
             }, 300 * i + 500);
+            setTimeout(() => {
+                taparPantalla.hide();
+            }, 300 * listaNumeros.length + 500);
         }
 
         for (var i = 0; i < listaNumeros.length; i++) {
@@ -52,20 +77,23 @@ $(document).ready(() => {
 
     botones.click(() => {
         $(idBoton + Id).css('background-color', '#00f');
-        taparPantalla.show();
-        // comprobar(listaNumeros.length);
         setTimeout(() => {
             $(idBoton + Id).css('background-color', '#000');
-            taparPantalla.hide();
         }, 200);
 
         console.log(Id);
-        console.log(iterador);
         console.log(listaNumeros);
 
-        if (Id == listaNumeros[iterador] && iterador == listaNumeros.length - 1) {
-            // iterador = 0;
-            setTimeout(comienzo, 1000);
+        if (Id == listaNumeros[iterador]) {
+            taparPantalla.show();
+            setTimeout(() => {
+                if (iterador < listaNumeros.length) {
+                    taparPantalla.hide();
+                }
+            }, 200);
+            if (iterador == listaNumeros.length - 1) { 
+                setTimeout(comienzo, 1000);
+            }
         } else if (Id != listaNumeros[iterador]) {
             taparPantalla.show();
             console.log("incorrecto");
@@ -83,6 +111,17 @@ $(document).ready(() => {
 
                 botonIncorrecto(i);
             }
+
+            setTimeout(() => {
+                mostrarBotonEmpezar();
+                footer.css('font-size', '35px');
+                if (record > highScore) {
+                    highScore = record;
+                    footer.html('¡Nuevo record! ' + highScore);
+                } else {
+                    footer.html('Tu puntuacion: ' + record);
+                }
+            }, 2500);
         }
 
         iterador++;

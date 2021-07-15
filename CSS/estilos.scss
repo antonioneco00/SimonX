@@ -36,6 +36,8 @@ html {
         background-color: $negro;
         overflow: hidden;
 
+        // Fondo
+
         #fondo {
             width: 100%;
             height: 100%;
@@ -56,6 +58,8 @@ html {
                 transform: skewY(-10deg);
                 z-index: -1;
             }
+
+            // Animacion fondo
 
             @for $i from 1 to 10 {
                 $posicionBarras: $i * 200 - 300;
@@ -96,6 +100,8 @@ html {
                 }
             }
         }
+
+        // Caja del juego
 
         #juego {    
             display: grid;
@@ -153,6 +159,12 @@ html {
                 .botones:hover {
                     border: 1px solid $azul;
                 }
+            }
+
+            #footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
 
