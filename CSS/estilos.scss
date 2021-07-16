@@ -323,8 +323,8 @@ html {
                     }
 
                     .botones {
-                        width: 20px;
-                        height: 20px;
+                        width: 30px;
+                        height: 30px;
                         background-color: $negro;
                         border: 1px solid $lila;
                         cursor: pointer;
@@ -393,8 +393,8 @@ html {
     
                 100% {
                     transform: rotateY(720deg);
-                    width: 200px;
-                    height: 200px;
+                    width: 250px;
+                    height: 250px;
                     font-size: 20px;
                     border: none;
                     box-shadow: 0px 0px 20px $lila, 0px 0px 20px $lila inset;

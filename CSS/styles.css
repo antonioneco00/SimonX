@@ -671,8 +671,8 @@ html body #juego #contenedorBotones .botones:hover {
     line-height: 25px;
   }
   html body #juego #contenedorBotones .botones {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: #000;
     border: 1px solid #30b;
     cursor: pointer;
@@ -730,8 +730,8 @@ html body #juego #footer {
     }
     100% {
       transform: rotateY(720deg);
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       font-size: 20px;
       border: none;
       box-shadow: 0px 0px 20px #30b, 0px 0px 20px #30b inset;
